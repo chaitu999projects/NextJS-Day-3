@@ -9,7 +9,7 @@ const addBoys = () => {
 
     const studentDataHandler = async(e) => {
         e.preventDefault();
-        const res = await fetch("http://localhost:3000/api/collage/students/boys", {
+        const res = await fetch("https://students-details-ri1sdmemt-chaitu999projects-projects.vercel.app/api/collage/students/boys", {
             method:"POST",
             "Content-type": "application/json",
             body:JSON.stringify({name, age, rollNumber})
