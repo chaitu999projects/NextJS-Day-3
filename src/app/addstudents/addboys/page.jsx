@@ -18,7 +18,7 @@ const AddBoys = () => {
         setIsSubmitting(true);
         
         try {
-            const res = await fetch("http://localhost:3000/api/collage/students/boys", {
+            const res = await fetch("/api/collage/students/boys", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
