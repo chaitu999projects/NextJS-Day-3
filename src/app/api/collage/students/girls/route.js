@@ -32,9 +32,9 @@ export async function PUT(req) {
     return NextResponse.json({success:"Student Details Upadated!"})
 }
 
-// export async function DELETE(req) {
-//     const studentID = req.nextUrl.searchParams.get("id");
-//     await girlsModel.findByIdAndDelete(studentID);
+export async function DELETE(req) {
+    const studentID = req.nextUrl.searchParams.get("id");
+    await girlsModel.findByIdAndDelete(studentID);
 
-//     return NextResponse.json({success: "Student romoved successfully!"})
-// }
+    return NextResponse.json({success: "Student romoved successfully!"})
+}
