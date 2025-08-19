@@ -25,7 +25,7 @@ export async function POST(req) {
 }
 
 export async function PUT(req) {
-    const studentID = req.nextUrl.searchParams.get("id"); // remember _id
+    const studentID = req.nextUrl.searchParams.get("id"); 
     const {newName:name, newAge:age, newRollNumber:rollNumber} = await req.json();
     await boysModel.findByIdAndUpdate(studentID, {name, age, rollNumber})
     return NextResponse.json({success:"Student Details Upadated!"})

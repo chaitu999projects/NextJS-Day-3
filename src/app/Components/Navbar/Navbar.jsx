@@ -20,12 +20,23 @@ const Navbar = () => {
               <Link 
                 href="/addstudents/addboys" 
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  pathname === '/addstudents/addboy' 
+                  pathname === '/addstudents/addboys' 
                     ? 'bg-white text-indigo-600 shadow-md' 
                     : 'text-white hover:bg-indigo-500 hover:bg-opacity-75'
                 }`}
               >
                 Add Boy Student
+              </Link>
+
+              <Link 
+                href="/allstudents/boys" 
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  pathname === '/allstudents/boys' 
+                    ? 'bg-white text-indigo-600 shadow-md' 
+                    : 'text-white hover:bg-indigo-500 hover:bg-opacity-75'
+                }`}
+              >
+                All Students
               </Link>
               
               <Link 
