@@ -25,7 +25,7 @@ const Navbar = () => {
                     : 'text-white hover:bg-indigo-500 hover:bg-opacity-75'
                 }`}
               >
-                Add Boy Student
+                Boys Registration
               </Link>
 
               <Link 
@@ -58,7 +58,7 @@ const Navbar = () => {
                     : 'text-white hover:bg-purple-500 hover:bg-opacity-75'
                 }`}
               >
-                Add Girl Student
+                Girls Registration
               </Link>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 : 'text-white hover:bg-indigo-500 hover:bg-opacity-75'
             }`}
           >
-            Add Boy Student
+            Boys Registration
           </Link>
           
           <Link 
@@ -96,7 +96,7 @@ const Navbar = () => {
                 : 'text-white hover:bg-purple-500 hover:bg-opacity-75'
             }`}
           >
-            Add Girl Student
+            Girls Registration
           </Link>
         </div>
       </div>

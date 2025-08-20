@@ -117,7 +117,7 @@ const GirlsForm = () => {
             type="submit"
             className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-4 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl active:scale-95 transform"
           >
-            Register Student
+            Register
           </button>
         </div>
         

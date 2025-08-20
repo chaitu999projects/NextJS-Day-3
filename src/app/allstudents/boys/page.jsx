@@ -22,11 +22,6 @@ const BoysPage = () => {
     studentHandler();
   }, []);
 
-  const filteredStudents = students.filter(student =>
-    student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    student.rollNumber.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
@@ -47,24 +42,22 @@ const BoysPage = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-          <div className="p-6 border-b border-gray-200 flex flex-col md:flex-row md:items-center justify-between">
-            <div className="mb-4 md:mb-0">
+          <div className="p-6 border-b border-gray-200">
+            <div className="mb-4">
               <h2 className="text-xl font-semibold text-gray-800">Student List</h2>
-              <p className="text-gray-600">{filteredStudents.length} students found</p>
+              <p className="text-gray-600">{students.length} students found</p>
             </div>
-            
-
           </div>
 
-          {filteredStudents.length === 0 ? (
+          {students.length === 0 ? (
             <div className="p-12 text-center">
               <div className="text-gray-400 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-medium text-gray-700 mb-2">No students found</h3>
-              <p className="text-gray-500">Try adjusting your search or add new students.</p>
+              <h3 className="text-xl font-medium text-gray-700 mb-2">No students available</h3>
+              <p className="text-gray-500">Add new students to get started.</p>
             </div>
           ) : (
             <div className="overflow-x-auto">
@@ -77,7 +70,7 @@ const BoysPage = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredStudents.map((item, i) => (
+                  {students.map((item, i) => (
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
