@@ -15,7 +15,7 @@ const GirlsForm = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/collage/students/girls', {
+      const response = await fetch('/api/collage/students/girls', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -36,7 +36,18 @@ const Navbar = () => {
                     : 'text-white hover:bg-indigo-500 hover:bg-opacity-75'
                 }`}
               >
-                All Students
+                All Boys
+              </Link>
+
+              <Link 
+                href="/allstudents/girls" 
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  pathname === '/allstudents/girls' 
+                    ? 'bg-white text-indigo-600 shadow-md' 
+                    : 'text-white hover:bg-indigo-500 hover:bg-opacity-75'
+                }`}
+              >
+                All Girls
               </Link>
               
               <Link 
